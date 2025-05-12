@@ -1,5 +1,4 @@
-import board
-import time
+import board, time
 from mfrc522 import MFRC522
 
 sck = board.GP2
