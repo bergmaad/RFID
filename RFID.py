@@ -10,14 +10,6 @@ rst = board.GP6
 
 rfid = MFRC522(sck, mosi, miso, cs, rst)
 
-# Check chip version
-version = rfid.read_reg(0x37)
-print("MFRC522 Version: ", hex(version))
-if version == 0x00 or version == 0xFF:
-    print("ERROR: MFRC522 not detected. Check wiring or try 5V power.")
-    while True:
-        pass
-
 print("\n***** Scan your RFid tag/card *****\n")
 
 prev_data = None
